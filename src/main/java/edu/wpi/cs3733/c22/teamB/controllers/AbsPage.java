@@ -17,9 +17,9 @@ public abstract class AbsPage implements IPage {
         //contentPane.setLayoutX(Bapp.getPrimaryStage().getWidth()/4);
         //contentPane.setLayoutY(Bapp.getPrimaryStage().getHeight()/6);
         anchorPane.setPrefWidth(Bapp.getPrimaryStage().getWidth() - AnchorHomeController.curAnchorHomeController.sidebar.getWidth());
-        anchorPane.setPrefHeight(Bapp.getPrimaryStage().getHeight() - AnchorHomeController.curAnchorHomeController.sidebar.getHeight());
+        anchorPane.setPrefHeight(Bapp.getPrimaryStage().getHeight());
         //(anchorpane-contentane)/2
-        contentPane.setLayoutX((anchorPane.getWidth()-contentPane.getPrefWidth())/-2);
+        contentPane.setLayoutX((anchorPane.getWidth()- contentPane.getPrefWidth())/-2);
         contentPane.setLayoutY((anchorPane.getHeight()-contentPane.getPrefHeight())/-2);
     }
 
@@ -28,16 +28,16 @@ public abstract class AbsPage implements IPage {
             //contentPane.setLayoutX(Bapp.getPrimaryStage().getWidth()/4);
             //contentPane.setLayoutY(Bapp.getPrimaryStage().getHeight()/6);
             anchorPane.setPrefWidth(Bapp.getPrimaryStage().getWidth() - AnchorHomeController.curAnchorHomeController.sidebar.getWidth());
-            anchorPane.setPrefHeight(Bapp.getPrimaryStage().getHeight() - AnchorHomeController.curAnchorHomeController.sidebar.getHeight());
+            anchorPane.setPrefHeight(Bapp.getPrimaryStage().getHeight());
             //(anchorpane-contentane)/2
-           contentPane.setLayoutY((anchorPane.getPrefHeight()-contentPane.getPrefHeight())/-2);
+           contentPane.setLayoutY((anchorPane.getPrefHeight()-contentPane.getPrefHeight())/2);
         });
 
         Bapp.getPrimaryStage().widthProperty().addListener((observable)-> {
             //contentPane.setLayoutX(Bapp.getPrimaryStage().getWidth()/4);
             //contentPane.setLayoutY(Bapp.getPrimaryStage().getHeight()/6);
             anchorPane.setPrefWidth(Bapp.getPrimaryStage().getWidth() - AnchorHomeController.curAnchorHomeController.sidebar.getWidth());
-            anchorPane.setPrefHeight(Bapp.getPrimaryStage().getHeight() - AnchorHomeController.curAnchorHomeController.sidebar.getHeight());
+            anchorPane.setPrefHeight(Bapp.getPrimaryStage().getHeight());
             //(anchorpane-contentane)/2
             contentPane.setLayoutX((anchorPane.getPrefWidth()-contentPane.getPrefWidth())/2);
         });
